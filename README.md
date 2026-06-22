@@ -2,42 +2,37 @@
 
 ## 🚨 The Situation
 
-You asked an AI to build a simple "Number Guessing Game" using Streamlit.
-It wrote the code, ran away, and now the game is unplayable. 
-
-- You can't win.
-- The hints lie to you.
-- The secret number seems to have commitment issues.
+Game Glitch Investigator is a Streamlit-based number guessing game where players try to guess a randomly generated secret number. This project originally contained several bugs that made the game difficult to play correctly. The goal of this assignment was to identify the issues, debug the application, refactor the code, and verify the fixes using automated tests.
 
 ## 🛠️ Setup
 
 1. Install dependencies: `pip install -r requirements.txt`
 2. Run the broken app: `python -m streamlit run app.py`
 
-## 🕵️‍♂️ Your Mission
+## Bugs Found
+- Bug #1: Incorrect Hint Logic - The game displayed incorrect hints. When the player's guess was too high, the game instructed them to guess higher, and when the guess was too low, it instructed them to guess lower.
+- Bug #2: Secret Number Comparison Issue - The secret number was sometimes converted into a string before being compared to the player's guess. This caused inconsistent behavior during gameplay. 
+- Bug #3: Game Logic Organization - Most of the game logic was located directly inside app.py, making the application harder to maintain and test.
 
-1. **Play the game.** Open the "Developer Debug Info" tab in the app to see the secret number. Try to win.
-2. **Find the State Bug.** Why does the secret number change every time you click "Submit"? Ask ChatGPT: *"How do I keep a variable from resetting in Streamlit when I click a button?"*
-3. **Fix the Logic.** The hints ("Higher/Lower") are wrong. Fix them.
-4. **Refactor & Test.** - Move the logic into `logic_utils.py`.
-   - Run `pytest` in your terminal.
-   - Keep fixing until all tests pass!
-
-## 📝 Document Your Experience
-
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+## ✅ Fixes Applied
+- Corrected the hint messages so they accurately guide the player.
+- Ensured the secret number remains the correct data type during comparisons.
+- Refactored game functions into logic_utils.py.
+- Improved code readability and organization.
+- Verified functionality using automated tests with pytest.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Run the app with `python -m streamlit run app.py`.
+2. Pick a difficulty.
+3. Enter a guess.
+4. Click “Submit Guess.”
+5. Follow the hint and keep guessing.
+6. Win by finding the correct number.
+7. Click “New Game” to play again.
+
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
