@@ -24,7 +24,7 @@ Game Glitch Investigator is a Streamlit-based number guessing game where players
 ## 📸 Demo Walkthrough
 
 
-<img src="images/demo.gif" width=600>
+<img src="images/demo.gif" width=500>
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
