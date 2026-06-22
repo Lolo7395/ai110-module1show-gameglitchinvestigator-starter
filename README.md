@@ -23,6 +23,9 @@ Game Glitch Investigator is a Streamlit-based number guessing game where players
 
 ## 📸 Demo Walkthrough
 
+
+<img src="images/demo.gif" width=600>
+
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
 1. Run the app with `python -m streamlit run app.py`.
