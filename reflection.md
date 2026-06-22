@@ -19,12 +19,14 @@ Document at least 3 bugs you found. Add rows as needed.
 
 ## 2. How did you use AI as a teammate?
 
-I used ChatGPT to help me understand the bugs and figure out what parts of the code needed changes. It explained how Streamlit session state works and suggested moving some of the logic into a separate file.One helpful suggestion was moving reusable functions into logic_utils.py. After doing this, the code became easier to organize and test. I checked that everything still worked by running the app and using pytest. One suggestion was not completely correct because it focused on session state before checking the main game logic. After testing the game myself, I realized the biggest issue was the incorrect hint messages. This showed me that AI suggestions should always be tested.
+i used ChatGPT to help me understand the bugs and figure out what parts of the code needed changes. It explained how Streamlit session state works and suggested moving some of the logic into a separate file.One helpful suggestion was moving reusable functions into logic_utils.py. After doing this, the code became easier to organize and test. I checked that everything still worked by running the app and using pytest. One suggestion was not completely correct because it focused on session state before checking the main game logic. After testing the game myself, I realized the biggest issue was the incorrect hint messages. This showed me that AI suggestions should always be tested.
+
 ---
 
 ## 3. Debugging and testing your fixes
 
 I knew a bug was fixed when I could recreate the problem before the change and then confirm it was gone afterward. I tested the game by entering different guesses and checking the results.One test I ran was entering a number higher than the secret number. After fixing the bug, the game correctly displayed "Go LOWER." I also ran pytest to make sure the check_guess() function returned the correct results. AI helped me understand what the tests were checking and why they were important. It also showed me how separating code into functions makes testing easier.
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
